@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    
+    <head>
+        <meta charset="UTF-8"> 
+        <title>Contacto - Barbería Alura</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">    
+    </head>
+
+    <body>
+
+        <header>
+            <div class="caja">
+                <h1><img src="imagenes/logo.png" alt="Logo de la Barbería Alura"></h1>
+
+                <!-- Si no carga la imagen, con la propiedad alt mostramos un texto alternativo, siempre debemos hacer esto con cada imagen.-->
+
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <form>
+                <!-- Al colocar el id en el input y el mismo nombre en el 
+                    for del label quedan enlazados o relacionados el input 
+                    y el label y al hacer clic el el label el cursor queda
+                    en el input . 
+                -->
+                <label for="nombreapellido">Nombre y Apellido</label>
+                <input type="text" id="nombreapellido" class="input-padron" required>
+
+                <!-- Con required hacemos que un campo sea obligatorio, y al
+                     enviar el formulario con este campo vacío nos muestra un
+                     mensaje de alerta-->
+
+                <!-- En la página www.mobileinputtypes.com encontramos los
+                    diferentes tipos de input que hay para que también se
+                    adapten al celular y los usemos en el desarrollo.
+
+                    Algunos tipos de inputs para el celular: 
+                    email, tel, number, password, date, datetime, month y search.
+                -->
+
+                <label for="correoelectronico">Correo Electrónico</label>
+                <input type="email" id="correoelectronico" class="input-padron" required placeholder="email@dominio.com">
+
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" class="input-padron" required placeholder="(XX) XXXX XXXX">
+
+                <!-- placeholder es una ayuda para el usuario
+                    de como debe llenar un campo 
+                -->
+
+                <label for="mensaje">Mensaje</label>
+                <textarea cols="70" rows="10" id="mensaje" class="input-padron" required></textarea>
+
+                <!-- Con fieldset agrupamos items que pertenecen al mismo grupo,
+                con div también funciona pero con fieldset le informamos al navegador
+                que todos los items hacen referencia al mismo grupo o eventos. 
+                Cuando se piden los datos de una tarjeta de crédito para pagar, esos
+                campos deben estar en un fieldset porque referencian a un tipo de
+                conjunto de datos.
+                El fieldset no usa la etiqueta <p> para colocar texto, usa la etiqueta
+                <legend> que es una etiqueta de contenido:    
+                -->
+
+                <fieldset>
+                    <legend>¿Cómo le gustaría que le contactemos?</legend>
+
+                    <!-- Al crear un input dentro de un label, los asociamos. -->
+
+                    <label for="radio-email"><input type="radio" name="contacto" value="email" id="radio-email">Email</label>
+                    
+
+                    <label for="radio-telefono"><input type="radio" name="contacto" value="telefono" id="radio-telefono">Teléfino</label>
+                    
+
+                    <label for="radio-whatsapp"><input type="radio" name="contacto" value="whatsapp" id="radio-whatsapp" checked>WhatsApp</label>
+                    
+
+                    <!-- La propiedad name solo se puede “completar” una vez, es por eso que,
+                         cuando seleccionamos uno de los ítems de los input, se anula el otro,
+                         manteniendo solamente uno seleccionado.
+                    -->
+
+                    <!-- Con checked dejamos seleccionada por defecto una opción del radio o de un checkbox -->
+                </fieldset>
+
+                <fieldset>
+                    <legend>¿En cuál horario prefiere ser atendido?</legend>
+                    <select>
+                        <option>Mañana</option>
+                        <option>Tarde</option>
+                        <option>Noche</option>
+                    </select>
+                </fieldset>
+
+                <label class="checkbox"><input type="checkbox" checked>¿Le gustaría recibir novedades de la barbería Alura?</label>
+
+                <input type="submit" value="Enviar formulario" class="enviar">
+            </form> 
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Día</th>
+                        <th>Horario</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Lunes</td>
+                        <td>08h ~ 20h</td>
+                    </tr>
+                    <tr>
+                        <td>Miércoles</td>
+                        <td>08h ~ 20h</td>
+                    </tr>
+                    <tr>
+                        <td>Viernes</td>
+                        <td>08h ~ 20h</td>
+                    </tr>
+                </tbody>               
+            </table>
+
+        </main>
+
+        <footer>
+            <img src="imagenes/logo-blanco.png" alt="Logo de la Barbería Alura">
+            <p class="copyright">&copy Copyright Barbería Alura - 2022</p>
+        </footer>
+        
+    </body>
+</html>
